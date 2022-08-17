@@ -1,10 +1,24 @@
 <html>
-     <div id="cotlight">
+     <div id="lightningLocator">
       </div>
-      <script src="https://ryadom-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+      <script src="https://time-developer-edition.ap8.force.com/time/lightning/lightning.out.js"></script>
       <script>
          $Lightning.use();
      </script>
+
+$    Lightning.use("c:testoutApp",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:lwcVitebsk", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://time-developer-edition.ap8.force.com/time/'  // Site endpoint
+    );
 
   <h1>Заголов12111111111ок</h1>
 
