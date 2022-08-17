@@ -1,23 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
-  TEST BODY222eeeee11111111
-     <div id="lightning"></div>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8 ">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <title>Пример веб-страницы</title>
+ </head>
+ <body>
+    <apex:includeLightning />
+     <div id="LightningAppDivId">
+      </div>
       <script src="https://ryadom-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
       <script>
-        $Lightning.use("c:application", function() {
-        $Lightning.createComponent("c:lwcVitebsk", {
-            	objectName: "Contact"
-            },
-              "lightning",
-              function(cmp) {
-                console.log("LWC component was created");
-                // do some stuff
-              }
-          );
-        },
-       'https://ryadom-dev-ed.lightning.force.com/'
-      );
+         $Lightning.use(
+             "c:application", 
+             function() { 
+                 $Lightning.createComponent(
+                     "c:lwcVitebsk", 
+                     {}, 
+                     "LightningAppDivId"
+                 );
+             }
+         );
      </script>
-  
+    <!-- End Default Content REMOVE THIS -->
+ 
+  <h1>Заголовок</h1>
+  <!-- Комментарий -->
+  <p>Первый абзац.</p>
+  <p>Второй абзац.</p>
+ </body>
 
 </html>
