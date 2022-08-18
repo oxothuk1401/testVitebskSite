@@ -1,21 +1,30 @@
 <html>
-    qwee1231241241
-    <div id="LightningAppDivId"></div>
-    <script src="https://time-developer-edition.ap8.force.com/lightning/lightning.out.js"></script>
+    <script src="https://myexam1011-developer-edition.ap27.force.com/test/lightning/lightning.out.js"></script>
+    <div data-lightning-out="true"></div>
+
     <script>
-        $Lightning.use("c:testoutApp",
-        function() {
-            $Lightning.createComponent(
-                "c:lwcVitebsk",
-                { },
-                "LightningAppDivId",   
-                function(cmp) {
-                    console.log('SITE IS CREATED');
-                    // callback when component is created and active on the page
-                }
-            );
-        },
-        'https://time-developer-edition.ap8.force.com'  // Site endpoint
-    );
+  
+      const appName = 'c:vitebskAuto';
+      const componentName = 'c:vitebskBus';
+      const lightningEndpoint = 'https://myexam1011-developer-edition.ap27.force.com';
+      const targetElement = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {
+  
+      };
+  
+      $Lightning.use(
+              appName,
+              function (){
+                $Lightning.createComponent(
+                        componentName,
+                        componentAttributes,
+                        targetElement,
+                        function (cmp){
+                          console.log('lightning component created');
+                        }
+                );
+              },
+              lightningEndpoint
+      );
     </script>
 </html>
