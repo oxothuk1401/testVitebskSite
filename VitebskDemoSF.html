@@ -1,17 +1,20 @@
 <html>
     <div id="LightningAppDivId"></div>
     <script src="https://time-developer-edition.ap8.force.com/lightning/lightning.out.js"></script>
-    $Lightning.use("c:testoutApp",
-    function() {
-        $Lightning.createComponent(
-            "c:lwcVitebsk",
-            { },
-            "LightningAppDivId",   
-            function(cmp) {
-                console.log('SITE IS CREATED');
-                // callback when component is created and active on the page
-            }
-        );
-    },
-    'https://time-developer-edition.ap8.force.com'  // Site endpoint
+    <script>
+        $Lightning.use("c:testoutApp",
+        function() {
+            $Lightning.createComponent(
+                "c:lwcVitebsk",
+                { },
+                "LightningAppDivId",   
+                function(cmp) {
+                    console.log('SITE IS CREATED');
+                    // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://time-developer-edition.ap8.force.com'  // Site endpoint
+    );
+    </script>
 </html>
