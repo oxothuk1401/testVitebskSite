@@ -1,25 +1,17 @@
 <html>
-     <div id="lightningLocator">
-      </div>
-      <script src="https://time-developer-edition.ap8.force.com/lightning/lightning.out.js"></script>
-      <script>
-         $Lightning.use("c:testoutApp",    // name of the Lightning app
-        function() {                  // Callback once framework and app loaded
-            $Lightning.createComponent(
-                "c:lwcVitebsk", // top-level component of your app
-                { },                  // attributes to set on the component when created
-                "lightningLocator",   // the DOM location to insert the component
-                function(cmp) {
-                    // callback when component is created and active on the page
-                }
-            );
-        },
-        'https://time-developer-edition.ap8.force.com/time/'  // Site endpoint
-    );
-     </script>
-
-          
-
-  <h1>111111123443</h1>
-
+    <div id="LightningAppDivId"></div>
+    <script src="https://time-developer-edition.ap8.force.com/lightning/lightning.out.js"></script>
+    $Lightning.use("c:testoutApp",
+    function() {
+        $Lightning.createComponent(
+            "c:lwcVitebsk",
+            { },
+            "LightningAppDivId",   
+            function(cmp) {
+                console.log('SITE IS CREATED');
+                // callback when component is created and active on the page
+            }
+        );
+    },
+    'https://time-developer-edition.ap8.force.com'  // Site endpoint
 </html>
